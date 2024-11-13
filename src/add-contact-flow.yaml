@@ -1,0 +1,19 @@
+appId: com.android.contacts
+onFlowComplete:
+    - runFlow: 
+        file: delete-contact.yaml
+        env:
+            CONTACT_NAME: ${FIRSTNAME} ${LASTNAME}
+    - stopApp
+---
+- runFlow: 
+    file: add-contact.yaml
+    env:
+        FIRSTNAME: Sang
+        LASTNAME: Nguyen
+        PHONENUBER: 0123456789
+        EMAIL: test@gmail.com
+- assertVisible:
+    id: "com.android.contacts:id/large_title"
+    text: ${FIRSTNAME} ${LASTNAME}
+- back

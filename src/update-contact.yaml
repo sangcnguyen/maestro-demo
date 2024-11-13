@@ -1,0 +1,13 @@
+appId: com.android.contacts
+tags:
+  - ignore
+---
+- tapOn: ${CONTACT_NAME}
+- tapOn: "Edit"
+- tapOn: "First name"
+- eraseText
+- inputText: ${UPDATED_FIRSTNAME}
+- tapOn: "Last name"
+- eraseText
+- inputText: ${UPDATED_LASTNAME}
+- tapOn: "SAVE"

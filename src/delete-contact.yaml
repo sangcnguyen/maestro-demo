@@ -1,0 +1,8 @@
+appId: com.android.contacts
+tags:
+  - ignore
+---
+- tapOn: ${CONTACT_NAME}
+- tapOn: More options
+- tapOn: "DELETE"
+- tapOn: "DELETE"

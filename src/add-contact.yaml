@@ -1,0 +1,18 @@
+appId: com.android.contacts
+tags:
+  - ignore
+---
+- launchApp
+- tapOn: "Create new contact"
+- tapOn: "First name"
+- inputText: ${FIRSTNAME}
+- tapOn: "Last name"
+- inputText: ${LASTNAME}
+- tapOn: "Phone"
+- inputText: ${PHONENUMBER}
+- scrollUntilVisible:
+    element:
+      text: "Email"
+- tapOn: "Email"
+- inputText: ${EMAIL}
+- tapOn: "Save"
